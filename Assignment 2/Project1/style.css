@@ -1,0 +1,714 @@
+:root {
+    --primary-color: #e65b01;
+    --secondary-color: #151515;
+    --primary-width: 1600px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    background-color: #faf4ed;
+    margin: auto;
+}
+
+
+nav {
+    /* border: 2px solid black; */
+    /* border-bottom: 0.5px solid rgb(163, 157, 157); */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 50px;
+    border-radius: 20px;
+    max-width: var(--primary-width);
+    margin: 0 auto;
+
+}
+
+nav .logo {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+nav .logo span {
+
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: var(--primary-color);
+}
+
+nav .navlinks {
+    width: 60%;
+}
+
+nav .navlinks ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 0 15px;
+}
+
+nav .buttons ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.menue-bar {
+    display: none;
+}
+
+main {
+    max-width: var(--primary-width);
+    margin: 0 auto;
+    padding: 12px 50px;
+}
+
+.main-section {
+    display: flex;
+    gap: 20px;
+    min-height: 90dvh;
+}
+
+.main-div.first {
+    flex: 0 1 25%;
+    padding-top: 23px;
+}
+
+.first .new {
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+
+.first .heading {
+    font-weight: 700;
+    /* width: 54%; */
+    margin: 12px 0;
+    font-size: 3rem;
+}
+
+.first .heading span {
+    color: var(--primary-color);
+}
+
+.first .price {
+    font-size: 1.5rem;
+    font-weight: 500;
+
+}
+
+.first .seperator {
+    border-bottom: 0.2px solid rgb(161, 156, 156);
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-right: 70px;
+}
+
+.first .discription {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.first .read-more {
+    font-size: 13px;
+    font-weight: bold;
+    margin: 12px 0;
+    display: flex;
+
+    align-items: center;
+}
+
+.first .read-more i {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: 100;
+}
+
+.accordion-container {
+    width: 100%;
+    max-width: 320px;
+    /* Adjust based on your design layout */
+    font-family: sans-serif;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #e0e0e0;
+    /* Clean separator line */
+    padding: 15px 0;
+}
+
+/* Style the header and hide the default browser arrow */
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    /* Removes default arrow in standard browsers */
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    color: #333333;
+    cursor: pointer;
+}
+
+/* Removes default arrow in Safari */
+.accordion-header::-webkit-details-marker {
+    display: none;
+}
+
+/* Create the custom downward chevron icon using pure CSS */
+.accordion-icon {
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid #333333;
+    border-bottom: 2px solid #333333;
+    transform: rotate(45deg);
+    transition: transform 0.2s ease;
+    margin-right: 5px;
+}
+
+/* Rotate the chevron arrow upward when the accordion is open */
+.accordion-item[open] .accordion-icon {
+    transform: rotate(-135deg);
+}
+
+/* Style the hidden content that drops down */
+.accordion-content {
+    padding-top: 12px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #666666;
+}
+
+.main-div.second {
+    flex: 0 1 50%;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+
+}
+
+.second .img {
+    flex: 1;
+    min-height: 0;
+    margin: 12px;
+}
+
+.second .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.second .secondFooter {
+    flex: 0 0 auto;
+    margin: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.secondFooterIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.secondFooterIcon i {
+    font-size: 2rem;
+
+}
+
+.main-div.third {
+    flex: 0 1 25%;
+    display: flex;
+    /* justify-content: end; */
+    align-items: center;
+    flex-direction: column;
+}
+
+.thirdMain {
+    padding-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.thirdMain .size {
+    text-align: center;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.boxes {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 12px 0;
+}
+
+.boxes p {
+    width: 50px;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 10px;
+    background-color: #f4ece5;
+}
+
+.boxes> :nth-child(2) {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.thirdMain .size> :nth-child(3) {
+    text-transform: uppercase;
+}
+
+.thirdMain .size> :nth-child(3) i {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+.seperator {
+    border-bottom: 1px solid rgb(136, 129, 129);
+    width: 70%;
+    margin: 23px;
+}
+
+.colors {
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.coatBoxes {
+
+    margin-top: 12px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+
+
+}
+
+.coatBoxes div {
+
+    width: 120px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.coatBoxes> :first-child> :first-child {
+    border: 1px solid var(--primary-color);
+}
+
+.coatBoxes .img {
+
+    width: 80%;
+    height: 80%;
+    border-radius: 10px;
+    background-color: #f4ece5;
+}
+
+.coatBoxes .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.third-buttons {
+
+    margin-top: 12px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px;
+}
+
+.third-buttons button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    font-size: 1.1rem;
+    font-weight: 400;
+    align-items: center;
+}
+
+.third-buttons> :last-child {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+
+
+}
+
+.cards-section {
+    min-height: 30dvh;
+    width: 100%;
+    background-color: #f6efe9;
+    border-radius: 30px;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.sameparent {
+
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.samchild {
+
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.samchild .img {
+
+    width: 50%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.samchild .text {
+
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.samchild .text h1 {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.samchild .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.footer {
+    min-height: 15dvh;
+    width: 100%;
+    background-color: #f6efe9;
+    border-radius: 30px;
+    padding: 12px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+}
+
+.footertwo {
+
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+}
+
+.footertwo .ff {
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 23px;
+}
+
+.ff i {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.ff h1 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.second i {
+    color: var(--primary-color);
+}
+
+/* Laptop */
+@media (max-width: 830px) {
+
+    .navlinks,
+    nav .buttons {
+        display: none;
+    }
+
+    .menue-bar {
+        display: block;
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+
+}
+
+/* Tablets */
+
+@media (max-width: 1024px) {
+
+    main {
+        padding: 12px 25px;
+    }
+
+    nav {
+        padding: 12px 25px;
+    }
+
+    .main-section {
+        flex-wrap: wrap;
+        min-height: auto;
+    }
+
+    .main-div.first {
+        flex: 1 1 40%;
+    }
+
+    .main-div.second {
+        flex: 1 1 55%;
+        min-height: 600px;
+    }
+
+    .main-div.third {
+        flex: 1 1 100%;
+    }
+
+    .thirdMain {
+        padding-top: 30px;
+    }
+
+    .coatBoxes {
+        flex-wrap: nowrap;
+    }
+
+    .cards-section,
+    .footer {
+        flex-direction: column;
+    }
+
+    .sameparent,
+    .footertwo {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    nav {
+        padding: 12px 20px;
+    }
+
+    nav .logo {
+        font-size: 2rem;
+    }
+
+    main {
+        padding: 10px 20px;
+    }
+
+    .main-section {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .main-div.first,
+    .main-div.second,
+    .main-div.third {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
+    .main-div.first {
+        padding: 20px;
+    }
+
+    .first .heading {
+        font-size: 2.5rem;
+    }
+
+    .main-div.second {
+        min-height: 600px;
+    }
+
+    .thirdMain {
+        padding-top: 20px;
+    }
+
+    .sameparent,
+    .footertwo {
+        flex-direction: column;
+        /* width: 100%; */
+    }
+
+    .samchild,
+    .ff {
+        width: 100%;
+    }
+
+    .ff {
+        justify-content: space-around;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    nav {
+        padding: 12px 16px;
+        border-radius: 0;
+    }
+
+    nav .logo {
+        font-size: 1.8rem;
+    }
+
+    .menue-bar {
+        display: block;
+    }
+
+    main {
+        padding: 0 12px;
+    }
+
+    .main-section {
+        gap: 10px;
+    }
+
+    .main-div.first {
+        padding: 20px 10px;
+    }
+
+    .first .heading {
+        font-size: 2rem;
+        line-height: 1.1;
+    }
+
+    .first .seperator {
+        margin-right: 0;
+    }
+
+    .accordion-container {
+        max-width: none;
+    }
+
+    .main-div.second {
+        min-height: auto;
+    }
+
+    .second .img {
+        /* height: 450px; */
+        flex: none;
+        margin: 0;
+    }
+
+    .second .secondFooter {
+        margin: 15px 0;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .secondFooterIcon {
+        font-size: 14px;
+    }
+
+    .thirdMain {
+        width: 100%;
+    }
+
+    .coatBoxes {
+        width: 100%;
+    }
+
+    .coatBoxes div {
+        width: 90px;
+        height: 90px;
+    }
+
+    .third-buttons {
+        padding: 10px 0;
+    }
+
+    .sameparent,
+    .footertwo {
+        flex-direction: column;
+        width: 100%;
+        
+    }
+
+    .samchild,
+    .ff {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 5dvh;
+       
+    }
+
+    
+
+    .samchild .img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
