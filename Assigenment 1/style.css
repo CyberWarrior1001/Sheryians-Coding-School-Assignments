@@ -1,0 +1,682 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url("images/bgimg.png");
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: cover;
+    background-color: #f7f4f0;
+    font-family: serif;
+    padding: 20px 35px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    width: 100%;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 23px;
+    font-weight: 100;
+    padding-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.navlinks li {
+    cursor: pointer;
+}
+
+.rightside {
+    gap: 20px;
+}
+
+.rightside .cartico {
+    font-size: 30px;
+    position: relative;
+    cursor: pointer;
+}
+
+.cartico::before {
+    content: "2";
+    position: absolute;
+    background-color: rgb(6, 66, 4);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: wheat;
+    top: 0;
+    right: -5px;
+}
+
+.rightside .hambargur {
+    display: flex;
+    gap: 7px;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.rightside .hambargur div {
+    width: 25px;
+    border: 1px solid black;
+}
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(300px, 1fr) minmax(450px, 1.5fr);
+    gap: 40px;
+}
+
+main > div {
+    padding-top: 30px;
+}
+
+/* =========================
+   LEFT SIDE
+========================= */
+
+.collecton {
+    font-size: 12px;
+    font-weight: 100;
+}
+
+.heading {
+    font-size: clamp(4rem, 7vw, 7rem);
+    line-height: 0.95;
+    font-weight: 100;
+}
+
+.line {
+    border: 1px solid black;
+    width: 70px;
+    margin: 20px 0;
+}
+
+.para {
+    width: min(100%, 360px);
+    line-height: 1.5;
+}
+
+.color {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+
+.colortx {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.col {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.gray {
+    background-color: gray;
+}
+
+.ofwite {
+    background-color: wheat;
+}
+
+.pink {
+    background-color: pink;
+}
+
+.details {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.details p {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.details .line2 {
+    border: 1px solid black;
+    width: 40px;
+    margin-bottom: 9px;
+}
+
+/* =========================
+   LEFT FOOTER
+========================= */
+
+.footerleft {
+    margin-top: 20px;
+    display: flex;
+    align-items: stretch;
+}
+
+.footerleft .footerdev {
+    flex: 1;
+}
+
+.footerdev {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    text-align: center;
+    gap: 12px;
+}
+
+.footerleft .footerdev:nth-child(2) {
+    border-left: 2px solid rgba(0, 0, 0, 0.493);
+    border-right: 2px solid rgba(0, 0, 0, 0.521);
+}
+
+.footerdev i {
+    padding: 8px;
+    border-radius: 50%;
+    color: rgb(13, 14, 13);
+    background-color: rgb(104, 104, 101);
+}
+
+/* =========================
+   RIGHT SIDE
+========================= */
+
+.right {
+    position: relative;
+    min-width: 0;
+}
+
+/* Vertical text */
+
+.parallalText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(270deg);
+    position: absolute;
+    top: 50%;
+    left: -90px;
+    gap: 12px;
+    white-space: nowrap;
+}
+
+.parallalText .line3 {
+    border: 1px solid black;
+    width: 40px;
+}
+
+.parallalText .text {
+    font-weight: 400;
+    font-size: 25px;
+}
+
+/* =========================
+   IMAGE + SIDEBAR
+========================= */
+
+.middle {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 80px;
+    gap: 25px;
+    align-items: start;
+}
+
+.middle .image {
+    width: 80%;
+    height: 99%;
+    margin-left: 10%;
+    /* height: clamp(400px, 55vw, 650px); */
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.3);
+}
+
+.middle .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* =========================
+   ADD TO CART
+========================= */
+
+.addtocart {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+    width: 100px;
+    height: 100px;
+
+    border-radius: 50%;
+    color: white;
+    background-color: rgb(75, 74, 74);
+
+    bottom: 10%;
+    right: 0%;
+
+    gap: 8px;
+    cursor: pointer;
+}
+
+.addtocart i {
+    font-size: 22px;
+}
+
+/* =========================
+   PRICE
+========================= */
+
+.price {
+    position: absolute;
+    padding: 5px 10px;
+    border-radius: 12px;
+    top: 30px;
+    left: 30px;
+    background-color: white;
+    font-weight: bold;
+}
+
+/* =========================
+   RATING
+========================= */
+
+.rating {
+    position: absolute;
+    padding: 5px 10px;
+    border-radius: 12px;
+    top: 30px;
+    right: 30px;
+    background-color: white;
+    font-weight: bold;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
+
+.sidebar .cart {
+    width: 80px;
+    height: 90px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar .cart img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* =========================
+   RIGHT FOOTER
+========================= */
+
+.rightfooter {
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 80px;
+
+    min-height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.3);
+}
+
+.rightfooter .footerdev {
+    flex: 1;
+    flex-direction: row;
+}
+
+.rightfooter .footerdev + .footerdev {
+    border-left: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    body {
+        padding: 20px 25px;
+    }
+
+    main {
+        grid-template-columns: 1fr 1.2fr;
+        gap: 30px;
+    }
+
+    .navlinks {
+        gap: 12px;
+        font-size: 14px;
+    }
+
+    .heading {
+        font-size: clamp(4rem, 8vw, 6rem);
+    }
+
+    .middle {
+        grid-template-columns: minmax(0, 1fr) 65px;
+        gap: 15px;
+    }
+
+    .sidebar .cart {
+        width: 65px;
+        height: 75px;
+    }
+
+    .parallalText {
+        left: -75px;
+    }
+
+    .parallalText .text {
+        font-size: 20px;
+    }
+
+    .rightfooter {
+        margin-left: 10px;
+        margin-right: 20px;
+    }
+}
+
+/* =========================================
+   SMALL TABLET / LARGE PHONE
+========================================= */
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 15px 20px;
+    }
+
+    /* Header */
+
+    nav {
+        align-items: center;
+    }
+
+    .navlinks {
+        display: none;
+    }
+
+    /* Main becomes one column */
+
+    main {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    main > div {
+        padding-top: 20px;
+    }
+
+    /* Left */
+
+    .heading {
+        font-size: clamp(4rem, 16vw, 6rem);
+        line-height: 0.9;
+    }
+
+    .para {
+        width: 100%;
+        max-width: 550px;
+    }
+
+    .footerleft {
+        max-width: 500px;
+    }
+
+    /* Right */
+
+    .right {
+        padding-top: 30px;
+    }
+
+    .parallalText {
+        display: none;
+    }
+
+    .middle {
+        grid-template-columns: 1fr;
+    }
+
+    .middle .image {
+        height: 600px;
+    }
+
+    .sidebar {
+        flex-direction: row;
+        overflow-x: auto;
+        padding: 5px;
+        gap: 15px;
+    }
+
+    .sidebar .cart {
+        flex: 0 0 80px;
+        width: 80px;
+        height: 90px;
+    }
+
+    .rightfooter {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 500px) {
+
+    body {
+        padding: 15px;
+        background-size: auto 100%;
+    }
+
+    nav .logo {
+        font-size: 19px;
+        padding-bottom: 10px;
+    }
+
+    .rightside {
+        gap: 12px;
+    }
+
+    .rightside .cartico {
+        font-size: 25px;
+    }
+
+    .rightside .hambargur div {
+        width: 22px;
+    }
+
+    /* Heading */
+
+    .heading {
+        font-size: 4.2rem;
+        line-height: 0.9;
+    }
+
+    .collecton {
+        margin-top: 5px;
+    }
+
+    .line {
+        margin: 15px 0;
+    }
+
+    /* Colors */
+
+    .color {
+        gap: 12px;
+    }
+
+    .col {
+        width: 27px;
+        height: 27px;
+    }
+
+    /* Left footer */
+
+    .footerleft {
+        width: 100%;
+    }
+
+    .footerleft .footerdev {
+        padding: 8px 5px;
+        font-size: 13px;
+    }
+
+    .footerdev i {
+        padding: 7px;
+    }
+
+    /* Main image */
+
+    .middle .image {
+        height: 480px;
+    }
+
+    .addtocart {
+        width: 85px;
+        height: 85px;
+        right: 7%;
+        bottom: 8%;
+        font-size: 12px;
+    }
+
+    .addtocart i {
+        font-size: 18px;
+    }
+
+    .price {
+        top: 15px;
+        left: 15px;
+        font-size: 13px;
+    }
+
+    .rating {
+        top: 15px;
+        right: 15px;
+        font-size: 12px;
+    }
+
+    /* Sidebar */
+
+    .sidebar {
+        gap: 12px;
+    }
+
+    .sidebar .cart {
+        width: 70px;
+        height: 80px;
+        flex-basis: 70px;
+    }
+
+    /* Right footer */
+
+    .rightfooter {
+        min-height: auto;
+        padding: 8px 5px;
+    }
+
+    .rightfooter .footerdev {
+        padding: 8px 4px;
+        gap: 7px;
+        font-size: 12px;
+    }
+
+    .rightfooter .footerdev i {
+        font-size: 14px;
+    }
+}
+
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
+
+@media (max-width: 360px) {
+
+    body {
+        padding: 12px;
+    }
+
+    .heading {
+        font-size: 3.5rem;
+    }
+
+    .middle .image {
+        height: 400px;
+    }
+
+    .footerleft .footerdev {
+        font-size: 11px;
+    }
+
+    .rightfooter .footerdev {
+        font-size: 10px;
+    }
+}
