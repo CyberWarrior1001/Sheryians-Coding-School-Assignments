@@ -1,0 +1,396 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    background-color: #0a0207;
+    color: #fff;
+    font-family: sans-serif;
+    background-image:
+        radial-gradient(circle at 75% 50%, rgba(225, 6, 78, 0.45) 0%, rgba(225, 6, 78, 0.1) 40%, transparent 70%),
+        linear-gradient(135deg, #1f0b1a 0%, #0d030b 50%, #050104 100%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+main {
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    max-width: 1600px;
+    margin: auto;
+
+
+}
+
+/* .background-character-image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 55%;
+    height: 100%;
+    background-image: url("./images/character-image-with-out-bg.png");
+    background-size: contain;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    opacity: 0.85;
+    z-index: 1;
+    scale: 0.8;
+
+} */
+
+
+.side-header {
+    position: absolute;
+    right: -378px;
+    rotate: 270deg;
+    top: 41%;
+    z-index: 2;
+    font-family: sans-serif;
+    font-size: 12rem;
+    font-weight: 700;
+    transform: translate(0, -48%);
+    background: linear-gradient(180deg, #fff9f945, #b8b7ba00);
+    background-clip: text;
+    color: transparent;
+
+}
+
+
+
+nav {
+    /* border: 2px solid white; */
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1rem;
+    padding: 0 10%;
+
+
+}
+
+nav .logo {
+    width: 190px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+nav .navLinks ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+nav .menue-bar i {
+    font-size: 1.4rem;
+}
+
+.hero {
+    /* border: 2px solid white; */
+    margin: 50px 10% 90px;
+    min-height: 540px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.hero .left,
+.hero .right {
+    
+    width: 50%;
+    min-height: 540px;
+    position: relative;
+
+}
+
+.left .head-logo {
+    /* border: 2px solid white; */
+    height: 40%;
+    width: 100%;
+}
+
+.head-logo img {
+    width: 60%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero .left p {
+    padding: 0 11px;
+    font-size: 13px;
+    font-weight: 100;
+    color: #ffffff96;
+    line-height: 27px;
+}
+
+.play-btn {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+    margin: 12px 17px;
+
+}
+
+.play-btn button {
+    padding: 0 23px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 12px;
+    height: 51px;
+}
+
+.play-btn .play-now i {
+    padding: 8px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: black;
+}
+.play-btn .play-now{
+    color: #fff;
+    background: linear-gradient(90deg, #e66465, #9198e5);
+}
+.play-btn .watc-traller{
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid #e22b91;
+}
+
+.game-header{
+    position: absolute;
+    bottom: -150px;
+    width: 100%;
+    font-size: 12rem;
+    z-index: 2;
+    font-family: sans-serif;
+    font-weight: 700;
+    transform: translate(0, -48%);
+    background: linear-gradient(180deg, #fff9f945, #b8b7ba00);
+    background-clip: text;
+    color: transparent; 
+}
+
+.right{
+    display: flex;
+}
+.right img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.right ul{
+    position: absolute;
+    color: #ff007791;
+    list-style: none;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.1rem;
+    gap: 16px;
+}
+
+.epsords{
+    padding: 0 10%;
+    height: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.card-wraper{
+    width: 100%;
+    height: 100%;
+    border-radius: 34px;
+    background: linear-gradient(180deg, #550e3f, #7d103a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+    
+}
+
+.img-card{
+    flex: 1 1 0;
+    min-width: 0;
+    height: 100%;
+    border-radius: 34px;
+    overflow: hidden;
+
+}
+.img-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 900px) {
+    nav {
+        padding: 0 6%;
+    }
+
+    nav .navLinks ul {
+        gap: 18px;
+        font-size: 0.95rem;
+    }
+
+    .hero {
+        margin: 30px 6% 70px;
+        min-height: 0;
+    }
+
+    .hero .left,
+    .hero .right {
+        width: 100%;
+        min-height: 420px;
+    }
+
+    .hero .left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .head-logo {
+        text-align: center;
+    }
+
+    .head-logo img {
+        width: min(60%, 360px);
+    }
+
+    .hero .right {
+        min-height: 500px;
+    }
+
+    .side-header {
+        right: -220px;
+        font-size: 7rem;
+    }
+
+    .game-header {
+        bottom: -100px;
+        font-size: 7rem;
+    }
+
+    .epsords {
+        padding: 0 6%;
+        height: auto;
+    }
+
+    .card-wraper {
+        height: 180px;
+        gap: 14px;
+        padding: 14px;
+        border-radius: 22px;
+    }
+
+    .img-card {
+        border-radius: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    nav {
+        height: 76px;
+    }
+
+    nav .logo {
+        width: 140px;
+    }
+
+    nav .navLinks {
+        display: none;
+    }
+
+    nav .menue-bar i {
+        font-size: 1.7rem;
+    }
+
+    .hero {
+        margin-top: 20px;
+    }
+
+    .hero .left,
+    .hero .right {
+        min-height: 360px;
+    }
+
+    .hero .right {
+        min-height: 430px;
+    }
+
+    .hero .left p {
+        padding: 0;
+        line-height: 23px;
+    }
+
+    .play-btn {
+        gap: 10px;
+        margin: 20px 0;
+        flex-wrap: wrap;
+    }
+
+    .play-btn button {
+        height: 46px;
+        padding: 0 16px;
+        font-size: 0.95rem;
+    }
+
+    .right ul {
+        right: 10px;
+        font-size: 1.5rem;
+    }
+
+    .side-header {
+        display: none;
+    }
+
+    .game-header {
+        bottom: -76px;
+        font-size: 5rem;
+    }
+
+    .card-wraper {
+        flex-direction: column;
+        align-items: stretch;
+        height: auto;
+        min-height: 0;
+        gap: 8px;
+        padding: 8px;
+        border-radius: 16px;
+    }
+
+    .img-card {
+        border-radius: 10px;
+        width: 100%;
+        height: 160px;
+        flex: 0 0 160px;
+    }
+}
