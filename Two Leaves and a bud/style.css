@@ -1,0 +1,1203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    /* height: 100%; */
+    font-size: 16px;
+}
+
+main {
+    background-image: url(./images/mobile-bg.webp);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: 114% 106vh;
+    min-height: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    /* border: 2px solid rgb(196, 10, 10); */
+
+}
+
+
+
+
+.anouncement-section {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background-color: #2a2857;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 12px;
+
+}
+
+nav {
+    margin: 1rem 0;
+    position: sticky;
+    z-index: 12;
+    top: 0;
+    left: 0;
+    background-color: #fffefb;
+    border-radius: 20px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 12px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    font-size: 1.1rem;
+}
+
+.desktop-links {
+    display: none;
+}
+
+nav .logo {
+    height: 100%;
+    width: 120px;
+}
+
+nav .logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero {
+    /* border: 3px solid black; */
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 20px;
+    padding-bottom: 100px;
+
+}
+
+.hero-text {
+    width: 100%;
+
+
+}
+
+.hero .hero-text h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: clamp(2.4rem, 5vw, 5rem);
+
+    font-weight: 400;
+    margin: 12px 0;
+    width: 100%;
+}
+
+.hero-text p {
+    font-family: Arial, sans-serif;
+    font-size: clamp(0.8rem, 1vw, 1rem);
+    margin-top: 19px;
+
+}
+
+.hero-text button {
+    border: none;
+    padding: 12px 30px;
+    width: 100%;
+    border-radius: 20px;
+    background-color: #2a2857;
+    color: #fff;
+    font-size: 1.1rem;
+    margin: 12px 0;
+}
+
+.section2 {
+    padding: 100px 40px;
+    text-align: center;
+}
+
+.section2 .head {
+    padding: 3rem 0;
+    font-size: clamp(2rem, 4vw, 4rem);
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100;
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 6rem;
+}
+
+.section2 .head>span {
+    font-style: italic;
+}
+
+.badge {
+    width: 100%;
+    margin: auto;
+    transform: rotate(358deg);
+    backface-visibility: hidden;
+}
+
+.badge span {
+    border: 3px solid black;
+    padding: 12px 12px;
+    text-transform: uppercase;
+    font-size: clamp(2rem, 3vw, 3rem);
+    font-weight: 700;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: -2px;
+    background-color: #DAAEEA;
+    border-radius: 12px;
+
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    outline: 1px solid transparent;
+
+}
+
+.card-container {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-direction: row;
+    overflow-x: scroll;
+}
+
+.card-container::-webkit-scrollbar {
+    display: none;
+}
+
+.card-container .card {
+    width: 291px;
+    height: 500px;
+    flex-shrink: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+
+}
+
+.card .image-container {
+    width: 100%;
+    height: 60%;
+    border: 2px solid black;
+    background-color: #C1EE91;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    
+}
+.card .image-container .add_to_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    font-size: 1rem;
+    background-color: #fff;
+    padding: 17px;
+    border-radius: 12px;
+    z-index: 3;
+    bottom: 5px;
+    right: 5px;
+}
+.card .image-container .add_to_card span{
+    font-weight: 100;
+}
+.product_name {
+    position: absolute;
+    font-size: 1rem;
+    padding: 12px;
+    top: 7px;
+    left: 6px;
+    border-radius: 12px;
+    background-color: #fff;
+    text-transform: uppercase;
+}
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.card .about-card-container {
+    width: 100%;
+    height: 40%;
+    padding: 20px;
+
+}
+
+.about-card-container h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 12px;
+}
+
+.about-card-container span {
+    width: 100%;
+    display: inline-block;
+    padding-left: 15px;
+    margin: 6px;
+    text-align: start;
+}
+
+.explore-tea {
+    padding: 18px 70px;
+    font-size: clamp(1rem, 1.5vw, 1.5rem) ;
+    border-radius: 23px;
+    border: none;
+    background-color: #2A2857;
+    color: #fff;
+    margin: 40px 0
+}
+
+.seperator {
+    border: 2px solid black;
+    margin-bottom: 20px;
+    width: 100%;
+    margin: auto;
+}
+
+.section3-top {
+    padding: 40px 40px;
+}
+
+.section3-top .s3badge {
+    /* width: 100%; */
+    margin: auto;
+    transform: rotate(351deg);
+    backface-visibility: hidden;
+    margin: 60px 0;
+    width: fit-content;
+}
+
+.s3badge span {
+    border: 3px solid black;
+    padding: 12px 12px;
+    text-transform: uppercase;
+    font-size: clamp(2rem, 3vw, 3rem);
+    font-weight: 700;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: -2px;
+    background-color: #73bc25;
+    border-radius: 12px;
+
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    outline: 1px solid transparent;
+}
+
+.section3-top h1 {
+    font-size: clamp(2rem, 4vw, 4rem);
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100;
+    width: 100%;
+}
+
+.section3-card-container {
+    margin: 50px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-direction: row;
+    overflow-x: scroll;
+}
+
+.section3-card-container::-webkit-scrollbar {
+    display: none;
+}
+
+.section3-card-container .card {
+    border: 2px solid black;
+    width: 291px;
+    height: 500px;
+    flex-shrink: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: relative;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #f5af8a;
+    border-radius: 20px;
+    text-align: center;
+
+
+}
+
+.section3-card-container .card h1 {
+    font-size: 2rem;
+}
+
+.section3-card-container .card span {
+    font-size: 14px;
+    color: gray;
+}
+
+
+.bottom-card {
+    position: absolute;
+    bottom: 4px;
+    /* left: 0px; */
+    width: 97%;
+    height: 20%;
+    border: 2px solid black;
+    margin: 0px auto;
+    background-color: #ea6d44;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    padding: 8px;
+}
+.s3bc{
+    height: 100%;
+    
+}
+.s3-card-b-text-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.s3-card-b-img-conainer{
+    width: 30%;
+    
+}
+.s3-card-b-img-conainer img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.button-containe{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.s3-card-b-button-container{
+    font-size: 1rem;
+    padding: 14px;
+    border-radius: 28px;
+}
+
+
+
+.section4 {
+    height: 200%;
+    background-image: url("https://www.twoleavestea.com/cdn/shop/files/adam-vradenburg-_gu7E90QChU-unsplash_1_1.webp?v=1771592855&width=1600");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 40px;
+    flex-direction: column;
+    gap: 200px;
+}
+
+.s4-badge {
+    /* width: 100%;
+    margin: auto; */
+    transform: rotate(358deg);
+    backface-visibility: hidden;
+}
+
+.s4-badge span {
+    border: 3px solid black;
+    padding: 12px 12px;
+    text-transform: uppercase;
+    font-size: clamp(2rem, 3vw, 3rem);
+    font-weight: 700;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: -2px;
+    background-color: #A2C9FC;
+    border-radius: 12px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    outline: 1px solid transparent;
+}
+
+.s4-head {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 600;
+    line-height: clamp(2rem, 12vw, 11rem);
+    font-size: clamp(2rem, 12vw, 11.25rem);
+    color: #fff;
+    width: 70%;
+    text-align: center;
+}
+
+.s4-pera {
+    color: #fff;
+    font-size: clamp(1.1rem, 4vw, 3.7rem);
+    font-weight: 300;
+    text-align: center;
+}
+
+.animated-card-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    flex-wrap: wrap;
+}
+
+.animated-card {
+    width: 100px;
+    height: 200px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.animated-card {
+    width: 134px;
+    height: 217px;
+}
+
+.animated-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.animated-card .text {
+    width: 100%;
+    height: 40%;
+    color: #fff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.animated-card .text h1 {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.s4-btn {
+    font-size: 1.5rem;
+    padding: 15px 47px;
+    border-radius: 30px
+}
+
+.section5 {
+    padding: 40px 30px;
+}
+
+
+.s5-badge span {
+    background-color: #FF7F31;
+}
+
+.s5-head {
+    font-size: clamp(2rem, 4vw, 4rem);
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100;
+    width: 100%;
+    margin: 40px 0;
+}
+
+.searchTea {
+    font-size: clamp(1rem, 2vw, 2rem);
+    padding: 2rem;
+    border-radius: 24px;
+
+}
+
+.searchCapsole-container {
+
+    margin: 100px 0;
+}
+
+.explorebyvibe {
+    font-size: 1rem;
+    margin: 30px 0;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.capsoles {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    flex-wrap: wrap;
+
+}
+
+.capsole {
+    border: 2px solid black;
+    padding: 14px;
+    font-size: 2rem;
+    border-radius: 23px;
+    font-weight: 100;
+    background-color: #DAEAFF;
+
+}
+
+
+.section6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #2a2857;
+}
+
+.s6div {
+    width: 100%;
+}
+
+.left img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.right {
+    padding: 30px;
+
+    color: #fff;
+}
+
+.section6 .right h1 {
+    font-size: clamp(2rem, 6vw, 6rem);
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100;
+
+}
+
+.section6 .right p {
+    font-size: clamp(1.2rem, 2vw, 2rem);
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100;
+    margin: 60px 0;
+
+}
+
+.section6 .right button {
+    font-size: 1.2rem;
+    padding: 18px 50px;
+    border-radius: 30px;
+}
+
+.section7 {
+    padding-top: 100px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    background-color: #9f6429;
+    gap: 100px;
+}
+
+.s7-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.s7badge {
+    width: 100%;
+    text-align: center;
+}
+
+.s7badge span {
+    background-color: #ffcb96;
+
+}
+
+.section7 .s7-head {
+    margin: 30px 0;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: clamp(2rem, 3vw, 3rem);
+    font-weight: 900;
+    font-family: sans-serif;
+}
+
+.section7 .training-pera {
+    font-size: 1.1rem;
+    color: #fff;
+    font-family: sans-serif;
+    text-transform: uppercase;
+}
+
+.s7-card {
+    display: flex;
+    align-items: center;
+    width: 93%;
+    background-color: #ffcb96;
+    border-radius: 10px;
+    border: 2px solid black;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+
+}
+
+.s7-card-div {
+    width: 100%;
+
+}
+
+.s7-left {
+    margin-top: -120px;
+    margin-top: -50px;
+}
+
+
+
+.s7-left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.s7-right {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+}
+
+.s7-right h1 {
+    font-size: clamp(2rem, 5vw, 5rem);
+    font-weight: 100;
+
+}
+
+.s7-right p {
+    font-size: 1rem;
+}
+
+.s7-right button {
+    width: fit-content;
+    padding: 18px 50px;
+    font-size: 1rem;
+    border-radius: 35px;
+    border: 2px solid black;
+    background-color: #fff;
+}
+
+.section8 {
+    padding: 50px;
+
+}
+
+.section8 .s8-head {
+    width: 100%;
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.s8-head h1 {
+    font-size: clamp(2rem, 4vw, 4rem);
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100;
+    width: 80%;
+}
+
+
+.s8-card-container {
+    margin: 100px 0;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-direction: row;
+    overflow-x: scroll;
+}
+
+.s8-card-container::-webkit-scrollbar {
+    display: none;
+}
+
+.s8-card-container .card {
+    border: 2px solid black;
+    width: 360px;
+    height: 400px;
+    flex-shrink: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.s8-container {
+    border: 2px solid black;
+    width: 100%;
+}
+
+.s8-card-container .card {
+    border-radius: 23px;
+    overflow: hidden;
+    border: 2px solid black;
+}
+
+.s8-card-container .card .top {
+    height: 80%;
+    background-color: #2a2857;
+    position: relative;
+}
+
+.s8-card-container .card .top .s8-container-card-name {
+    position: absolute;
+    text-transform: uppercase;
+    color: black;
+    top: 12px;
+    left: 13px;
+    border: 2px solid;
+    padding: 8px;
+    background-color: #fff;
+    border-radius: 14px;
+}
+
+.s8-card-container .card .top img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.s8-card-container .card .bottom {
+    height: 20%;
+    font-size: 1.2rem;
+    font-weight: 100;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    background-color: #c0dbff;
+
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.btn-container .s8-btn {
+    font-size:clamp(1rem, 1.5vw, 1.5rem);
+    padding: 18px 40px;
+    border-radius: 31px;
+    border: 2px solid black;
+    background-color: #2a2857;
+    color: #fff;
+}
+
+/* ==========================================================================
+   Mobile-First Base Styles (Default for Phones)
+   ========================================================================== */
+
+/* Outer Section */
+.section9 { 
+  background-image: url("https://www.twoleavestea.com/cdn/shop/files/Two_Leaves_Tea_Aug_25_Shoot-14x_SQ_1_d549e6bb-f1ad-4b36-a851-05e1af195a31.webp?v=1771593222&width=1800.0"); 
+  background-position: center; 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  width: 100%; 
+  min-height: 80vh; 
+  display: flex; 
+  justify-content: center; /* Centered on mobile for better readability */
+  align-items: center; 
+  padding: 20px; 
+  box-sizing: border-box;
+} 
+
+/* Inner Card Container */
+.left-bottom-container { 
+  width: 100%; /* Spans full width minus the section padding */
+  background-color: #f26412; 
+  padding: 30px 24px;
+  border-radius: 20px; 
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px; 
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); 
+}
+
+/* Typography */
+.left-bottom-container h1 {
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 1.8rem; /* Slightly smaller for small screens */
+  line-height: 1.3;
+  margin: 0;
+}
+
+/* Call-to-Action Button */
+.about-btn {
+  background-color: #ffffff;
+  color: #f26412;
+  border: none;
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.about-btn:hover {
+  background-color: #222222;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+
+    height: 200vh;
+    border: 2px solid black;
+    background-color: #c0dbff;
+}
+.footer-top{
+    display: flex;
+   
+    flex-direction: column;
+    /* height: 60%; */
+    width: 100%;
+
+    padding: 100px 100px;
+    gap: 50px;
+}
+.footer-top-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    width: 100%;
+}
+.seach-with-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 50%;
+
+}
+.seach-with-btn input{
+    padding: 16px 41px;
+    font-size: 1.1rem;
+    border-radius: 12px;
+    border: 2px solid;
+}
+.seach-with-btn button{
+    font-size: 1.1rem;
+    padding: 16px 39px;
+    border-radius: 21px;
+    border: 2px solid black;
+    background-color: #2A2857;
+    color: #fff;
+}
+.social-links{
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    gap: 20px;
+    width: 50%;
+    font-size: 2rem;
+}
+
+.social-links li{
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 50%;
+}
+.footer-top-bottom{
+    padding: 50px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    border-radius: 23px;
+    background-color: #2a2857;
+    color: #fff;
+}
+.footer-top-bottom h1{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+.footer-top-bottom ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+.footer-top-bottom ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.footer-bottom{
+    height: 40%;
+    width: 100%;
+    background-image: url("https://www.twoleavestea.com/cdn/shop/files/footer-extended_1.png?v=1771834074");
+    background-size: cover;
+    background-position: center;
+
+
+}
+
+@media (max-width: 999px) {
+    .footer {
+        height: auto;
+    }
+
+    .footer-top {
+        padding: 60px 30px;
+    }
+
+    .footer-top-top {
+        flex-direction: column;
+        gap: 30px;
+        padding: 0;
+    }
+
+    .seach-with-btn,
+    .social-links {
+        width: 100%;
+    }
+
+    .seach-with-btn input {
+        min-width: 0;
+        flex: 1;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .footer-top-bottom {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    .footer-bottom {
+        height: 400px;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-top {
+        padding: 40px 20px;
+    }
+
+    .seach-with-btn {
+        gap: 10px;
+    }
+
+    .seach-with-btn input {
+        width: 0;
+        padding: 16px;
+    }
+
+    .seach-with-btn button {
+        padding: 16px 24px;
+    }
+
+    .footer-top-bottom {
+        grid-template-columns: 1fr;
+        padding: 30px 24px;
+    }
+
+    .footer-top-bottom ul li a {
+        font-size: 1rem;
+    }
+
+    .footer-bottom {
+        height: 280px;
+    }
+}
+
+
+@media (min-width: 768px) {
+  .section9 {
+    padding: 50px;
+    justify-content: flex-start; 
+    align-items: flex-end;        
+  }
+
+  .left-bottom-container {
+    max-width: 450px;  
+    padding: 40px;
+    gap: 24px;
+  }
+
+  .left-bottom-container h1 {
+    font-size: 2.2rem;  
+  }
+}
+
+
+
+
+@media (min-width: 1000px) {
+    main {
+        background-image: url(./images/desktop-bg.webp);
+
+    }
+
+    .hambargar {
+        display: none;
+    }
+
+    .desktop-links {
+        display: block;
+    }
+
+
+
+    .hero {
+        /* border: 3px solid black;3 */
+        width: 50%;
+        height: 85vh;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0 20px;
+
+    }
+
+    .hero-text button {
+        border: none;
+        padding: 12px 30px;
+        width: 100%;
+        border-radius: 20px;
+        background-color: #2a2857;
+        color: #fff;
+        font-size: 1.8rem;
+        margin: 12px 0;
+        width: fit-content;
+    }
+
+    .section5 {
+        padding: 150px;
+    }
+
+    .s5-head {
+        margin: 100px 0;
+    }
+
+    .section6 {
+        flex-direction: row;
+
+    }
+
+    .s6div {
+        width: 50%;
+    }
+
+    .right {
+        padding: 90px !important;
+    }
+
+    .s7-card {
+        flex-direction: row;
+
+
+    }
+
+    .s7-left {
+        margin-top: -120px;
+
+    }
+
+    .s7-card-div {
+        width: 50%;
+
+    }
+
+    .s7-right {
+        padding: 80px;
+    }
+
+
+
+}
+
+@media (min-width: 444px) {
+    .card-container .card {
+        width: 350px;
+        height: 500px;
+        flex-shrink: 0;
+    }
+
+    .section3-card-container .card {
+        width: 350px;
+    }
+
+    .section5 {
+        padding: 100px 60px;
+    }
+
+    .s5-head {
+        margin: 60px 0;
+    }
+
+    .right {
+        padding: 50px;
+
+
+    }
+
+    .s7-right {
+        padding: 50px;
+    }
+
+
+    .s7-right button {
+        font-size: 1.3rem;
+    }
+
+    .s7-right p {
+        font-size: 1.5rem;
+    }
+
+}
