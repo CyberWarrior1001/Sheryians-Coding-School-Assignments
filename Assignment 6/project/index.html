@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interective Task manager</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <nav>
+            <div class="logo">
+                <img src="https://learn.sheryians.com/logo.png" alt="logo-img">
+                <h1 class="logo-text">Task Manager</h1>
+            </div>
+            <div class="nav_actions">
+                <button id="make_todo_form_visible"><span class="addtodo_txt">Add Task</span> <i
+                        class="ri-add-line"></i></button>
+            </div>
+        </nav>
+        <button class="sidebar_toggle_btn" id="open_sidebar_btn" aria-label="Open sidebar" aria-controls="sidebar"
+            aria-expanded="false">
+            <i class="ri-arrow-right-line"></i>
+        </button>
+        <div class="sid_with_tsk_container">
+
+            <!-- sidebar -->
+            <aside class="sid_div" id="sidebar">
+                <button class="sidebar_close_btn" id="close_sidebar_btn" aria-label="Close sidebar">
+                    <i class="ri-close-line"></i>
+                </button>
+                <div id="home" onclick="actvate_tab('home')" class="side_tab active">
+                    <span>🏠</span>
+                    <p>Home</p>
+                </div>
+                <div id="dashboard" onclick="actvate_tab('dashboard')" class="side_tab ">
+                    <span>📊</span>
+                    <p>Dashboard</p>
+                </div>
+
+                <div id="setting" onclick="actvate_tab('setting')" class="side_tab">
+                    <span>⚙️</span>
+                    <p>Settings</p>
+                </div>
+            </aside>
+
+            <!-- Tasks container -->
+            <div class="task_container sid_div ">
+                <div class="home_task_container ">
+                    <h1 class="todo-txt">Your Current Todos</h1>
+                    <div class="card_container">
+
+
+                    </div>
+
+                </div>
+
+                <!-- Dashboard -->
+                <div class="dashboard_container make_thing_hide">
+
+                    <h1 class="dshbrd-txt">Your Dashboard</h1>
+
+                    <div class="task_summary">
+
+                        <!-- Total Tasks -->
+                        <div class="summary_card">
+                            <div class="summary_icon">
+                                <i class="ri-task-line"></i>
+                            </div>
+
+                            <div>
+                                <p>Total Tasks</p>
+                                <h2 id="total_tasks"></h2>
+                            </div>
+                        </div>
+
+                        <!-- Completed Tasks -->
+                        <div class="summary_card">
+                            <div class="summary_icon">
+                                <i class="ri-checkbox-circle-line"></i>
+                            </div>
+
+                            <div>
+                                <p>Completed Tasks</p>
+                                <h2 id="completed_tasks">2</h2>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="notes">
+                        <h1>We can add other functionalities</h1>
+                        <p>Hi Sheryians! i can add other functionalities here like charts digrams etc. but then it will
+                            take a lot of time.</p>
+                            <h1>Event Propagation Demo</h1>
+                        <div class="eventDemo">
+                            <div class="eventBubbling ev">
+                                <div class="parent">
+                                    <h2>Parent</h2>
+
+                                    <div class="child">
+                                        <h3>Child</h3>
+
+                                        <button class="btn" onclick="eventbubblingFired()">
+                                            click-EventBubbling
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="eventcapturing ev">
+                                <div class="parent">
+                                    <h2>Parent</h2>
+
+                                    <div class="child">
+                                        <h3>Child</h3>
+
+                                        <button class="btn" onclick="eventcapturingFired()">
+                                            click-capturing
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="output" class="logs ev">
+                                <h2>Event Order Logs</h2>
+                            </div>
+                        </div>
+                        <button onclick="clearLogs()" class="clear_logs">Clear Logs</button>
+                    </div>
+                    <!-- DOM  -->
+                     <h1 class="render-pipline">Browser Rendering Pipline </h1>
+                    <div class="browser_rendering_pipline">
+                        <div class="timeline"></div>
+                        <div class="timeline-item">
+                            <div class="timeline-card">
+                                <h3>HTML</h3>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-card">
+                                <h3>PARSING</h3>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-card">
+                                <h3>TOKENIZATION</h3>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-card">
+                                <h3>DOM TREE</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- CSSOM -->
+                    <div class="browser_rendering_pipline">
+                         
+                        <div class="timeline"></div>
+                        <div class="timeline-item">
+                            <div class="timeline-card">
+                                <h3>CSS</h3>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-card">
+                                <h3>CSSOM TREE </h3>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-card">
+                                <h3>DOM TREE + CSSOM TREE </h3>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-card">
+                                <h3>RENDER TREE </h3>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <!-- Settings -->
+                <div class="settings_container make_thing_hide">
+
+                    <h1 class="settings_title">Settings</h1>
+                    <p class="settings_subtitle">
+                        Customize your task manager experience.
+                    </p>
+
+                    <!-- Theme Settings -->
+                    <div class="setting_card">
+
+                        <div class="setting_card_header">
+                            <div class="setting_icon">
+                                <i class="ri-palette-line"></i>
+                            </div>
+
+                            <div>
+                                <h2>Theme</h2>
+                                <p>Choose how your dashboard looks.</p>
+                            </div>
+                        </div>
+
+                        <div id='change_theme' class="theme_options">
+
+                            <button id="light_theme_btn" class="theme_option" data-theme="light">
+                                <div class="theme_preview light_preview"></div>
+                                <span>Light</span>
+                            </button>
+
+                            <button id="dark_theme_btn" class="theme_option" data-theme="dark">
+                                <div class="theme_preview dark_preview"></div>
+                                <span>Dark</span>
+                            </button>
+
+
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Font Settings -->
+                    <div class="setting_card">
+
+                        <div class="setting_card_header">
+                            <div class="setting_icon">
+                                <i class="ri-font-size-2"></i>
+                            </div>
+
+                            <div>
+                                <h2>Font</h2>
+                                <p>Choose your preferred font style.</p>
+                            </div>
+                        </div>
+
+                        <div class="font_options">
+
+                            <button class="font_option " data-font="sans-serif">
+                                <span class="font_preview inter">Aa</span>
+                                <span>Inter</span>
+                            </button>
+
+                            <button class="font_option" data-font="poppins">
+                                <span class="font_preview poppins">Aa</span>
+                                <span>Poppins</span>
+                            </button>
+
+                            <button class="font_option" data-font="roboto">
+                                <span class="font_preview roboto">Aa</span>
+                                <span>Roboto</span>
+                            </button>
+
+                            <button class="font_option" data-font="Georgia">
+                                <span class="font_preview georgia">Aa</span>
+                                <span>Georgia</span>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- add todo overlay and inside that i have add todo card with form -->
+        <div class="add_todo_overlay make_thing_hide">
+
+            <form class="add_todo_form">
+
+                <div class="form_header">
+                    <div>
+                        <h2>Add New Task</h2>
+                        <p>Create a new task and keep track of it.</p>
+                    </div>
+
+                    <button type="button" class="close_btn">
+                        <i class="ri-close-line"></i>
+                    </button>
+                </div>
+
+                <div class="form_group">
+                    <label for="task_title">Task Title</label>
+                    <input type="text" id="task_title" placeholder="Enter task title" required>
+                </div>
+
+                <div class="form_group">
+                    <label for="task_description">Description</label>
+                    <textarea id="task_description" placeholder="Enter task description" rows="4"></textarea>
+                </div>
+
+                <div class="form_row">
+
+                    <div class="form_group">
+                        <label for="task_category">Category</label>
+                        <select id="task_category" required>
+                            <option value="">Select category</option>
+                            <option value="programming">Programming</option>
+                            <option value="study">Study</option>
+                            <option value="work">Work</option>
+                            <option value="personal">Personal</option>
+                        </select>
+                    </div>
+
+                    <div class="form_group">
+                        <label for="task_date">Due Date</label>
+                        <input type="date" id="task_date">
+                    </div>
+
+                </div>
+
+                <div class="form_buttons">
+                    <button type="button" class="cancel_btn">
+                        Cancel
+                    </button>
+
+                    <button type="submit" class="add_task_btn ">
+                        Add Task
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
