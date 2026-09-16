@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinTrack Pro</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.5.1/chart.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="">
+    <div class="registration_main">
+        <div class="login-card">
+            <div class="login-header">
+                <h1>Welcome Back</h1>
+                <p>Login to FinTrack Pro</p>
+            </div>
+
+            <div class="signup-header make_thing_hide">
+                <h1>Create Account</h1>
+                <p>Join FinTrack Pro</p>
+            </div>
+            <div class="login-form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" class="form-control filled-highlight">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" class="form-control">
+                </div>
+
+                <button class="btn-login" onclick="login()">Login</button>
+                <button class="btn-Signup make_thing_hide" onclick="signUp()">Sign Up</button>
+            </div>
+            <div class="login-footer ">
+                Don't have an account? <a id="make_form_signup">Register here</a>
+            </div>
+            <div class="signup-footer make_thing_hide">
+                Already have an account? <a id="make_form_Login">Login here</a>
+            </div>
+
+        </div>
+    </div>
+    <main class="make_thing_hide">
+        <aside class="">
+            <button onclick="closeSidebar()" class="sidebar-close" title="Close menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="logo">
+                <i class="fa-solid fa-layer-group"></i>
+                <div>
+                    <h2>FinTrack Pro</h2>
+                    <p>Enterprise Finance</p>
+                </div>
+            </div>
+            <nav class="nav-menu">
+                <a class="nav-item active dashboard">
+                    <i class="fa-solid fa-table-cells-large"></i>
+                    Dashboard
+                </a>
+                <a class="nav-item setting">
+                    <i class="fa-solid fa-gear"></i>
+                    Settings
+                </a>
+            </nav>
+            </div>
+            <div class="sidebar-footer">
+                <button onclick="openAddTransaction()" class="btn-add-transaction">
+                    <i class="fa-solid fa-plus"></i>
+                    Add Transaction
+                </button>
+            </div>
+        </aside>
+        <div class="container">
+            <nav id="main_nav">
+                <button onclick="openSidebar()" class="sidebar-toggle" title="Open menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <h1 id="name"></h1>
+                <button onclick="logout()"> <i class="ri-logout-box-r-line"></i> Logout</button>
+            </nav>
+
+            <!-- Dashboard container -->
+            <div class="container-content dashboard_container ">
+
+                <div class="header">
+                    <h1>Financial Overview</h1>
+                    <p>Real-time tracking application</p>
+                </div>
+                <div class="dashboard-container">
+
+                    <div class="top-row">
+                        <div class="card current-balance">
+                            <i class="ri-bank-fill"></i>
+                            <p>Current Balance</p>
+                            <h1 id="current_balance">$ 38000.00</h1>
+
+                        </div>
+                        <div class="card income">
+                            <i class='bx bx-trending-up'></i>
+                            <p>Total Income</p>
+                            <h1 id="income">$ 50000.00</h1>
+
+                        </div>
+                        <div class="card expence">
+                            <i class='bx bx-trending-down'></i>
+                            <p>Total Expense </p>
+                            <h1 id="expence">$ 12000.00</h1>
+
+                        </div>
+                        <div class="card transactions">
+                            <i class="fa-solid fa-piggy-bank"></i>
+                            <p>Total Transactions </p>
+                            <h1 id="total_transactions">2</h1>
+
+                        </div>
+                    </div>
+                    <div class="bottom-row">
+                        <div class="card">
+                            <h2>Cash Flow Analysis</h2>
+
+                            <div class="chart-container">
+                                <canvas id="cashFlowChart"></canvas>
+                            </div>
+                        </div>
+
+                        <div class="card perference">
+                            <h2>Preferences</h2>
+                            <div class="setting-row">
+                                <span class="setting-label">Dark Mode</span>
+                                <label class="switch">
+                                    <input type="checkbox" id="darkModeToggle">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <hr class="divider">
+                            <button onclick="resetAll()" class="btn-reset">
+                                <i class="fa-solid fa-trash-can"></i>
+                                Reset All Data
+                            </button>
+                        </div>
+                    </div>
+                    <div class="allTransactions">
+                        <h2>All Transactions</h2>
+                        <div class="card-toolbar">
+                            <div class="search-container">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <input id="myQuery" type="text" class="search-input"
+                                    placeholder="Search transactions...">
+                            </div>
+
+                            <select id="querySelector" class="type-select">
+                                <option>All Types</option>
+                                <option>Income</option>
+                                <option>Expense</option>
+                            </select>
+                        </div>
+
+                        <div class="table-responsive">
+                            <table class="transaction-table">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 20%;">Date</th>
+                                        <th style="width: 25%;">Description</th>
+                                        <th style="width: 15%;">Category</th>
+                                        <th style="width: 25%;">Amount</th>
+                                        <th style="width: 15%;">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="transactions_body">
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- Setting container -->
+            <div class="container-content setting_container make_thing_hide">
+                <div class="header">
+                    <h1>Financial Overview</h1>
+                    <p>Real-time tracking application</p>
+                </div>
+                <div class="setting_card">
+                    <h2>Profile Details</h2>
+                    <form onsubmit="event.preventDefault();">
+                        <!-- Parallel Input Rows Layout Container -->
+                        <div class="form-row">
+                            <!-- Name Entry Component Field -->
+                            <div class="form-group">
+                                <label for="fullName">Full Name</label>
+                                <input type="text" id="fullName" class="form-control" value="Awais Ahmad">
+                            </div>
+
+                            <!-- Currencies Dropdown Option Selector Component Field -->
+                            <div class="form-group">
+                                <label for="primaryCurrency">Primary Currency</label>
+
+                                <select id="primaryCurrency" class="form-control">
+                                    <option value="USD">USD ($)</option>
+                                    <option value="EUR">EUR (€)</option>
+                                    <option value="GBP">GBP (£)</option>
+                                    <option value="PKR">PKR (₨)</option>
+                                    <option value="INR">INR (₹)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Execution Action Trigger Component Call -->
+                        <button onclick="changeSettings()"  class="btn-save">Save Changes</button>
+                    </form>
+                </div>
+            </div>
+
+
+            <!-- Add Transaction Overlay -->
+            <div class="add_transaction_ovelay make_thing_hide">
+                <div class="add_transaction_card">
+                    <!-- Add transaction card header -->
+                    <div class="add_transaction_card-header">
+                        <h2>Add Transaction</h2>
+                        <button onclick="closeAddTransaction()" class="btn-close" title="Close modal">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+                    <!-- Edit transaction card header -->
+                    <div class="edit_transaction_card-header make_thing_hide">
+                        <h2>Edit Transaction</h2>
+                        <button onclick="closeAddTransaction()" class="btn-close" title="Close modal">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+
+                    <div class="card-form">
+                        <div class="form-group">
+                            <label for="transactionType">Type</label>
+                            <select id="transactionType" class="form-control">
+                                <option value="expense" selected>Expense</option>
+                                <option value="income">Income</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="transactionDesc">Description</label>
+                            <input type="text" id="transactionDesc" class="form-control"
+                                placeholder="e.g. Amazon, Salary, Coffee">
+                        </div>
+                        <div class="form-row-split">
+                            <div class="form-group">
+                                <label for="transactionAmount">Amount</label>
+                                <input type="number" id="transactionAmount" class="form-control" step="0.01">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="transactionDate">Date</label>
+                                <input type="date" id="transactionDate" class="form-control" value="2026-09-14">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="transactionCategory">Category</label>
+                            <select id="transactionCategory" class="form-control">
+                                <option value="" disabled selected>Select a category</option>
+                                <option value="shopping">Shopping</option>
+                                <option value="salary">Salary</option>
+                                <option value="food">Food & Dining</option>
+                                <option value="utilities">Utilities</option>
+                            </select>
+                        </div>
+
+                        <button onclick="save_form_transaction()" id="add_transaction_btn"
+                            class="btn-submit-transaction">Save Transaction</button>
+                        <button onclick="edit_form_transaction()" id="edit_transaction_btn"
+                            class="btn-submit-transaction make_thing_hide">Edit Transaction</button>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
