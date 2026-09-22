@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <nav class="navbar">
+
+            <div class="nav-brand">
+                <h1>Productivity Dashboard</h1>
+            </div>
+
+            <div class="nav-actions">
+              
+                <button class="icon-btn" aria-label="User Profile">
+
+                    <a href="https://github.com/CyberWarrior1001/Sheryians-Coding-School-Assignments" target="_blank">
+
+                        <i class="ri-github-fill"></i>
+                    </a>
+                </button>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="left">
+                <div class="glass-card">
+                    <div class="top-section">
+                        <div class="location">
+                            <span>📍</span>
+                            <span id="location"></span>
+                        </div>
+
+                        <div class="weather">
+                            <span class="weather-icon"></span>
+                            <div>
+                                <h3 id="temperature"></h3>
+                                <p id="weather-status"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Clock -->
+                    <div class="clock-section">
+
+                        <p class="greeting" id="greeting">
+                          
+                        </p>
+
+                        <h1 class="main-time" id="time">
+                            
+                        </h1>
+
+                        <p class="main-date" id="date">
+                           
+                        </p>
+
+                    </div>
+
+                    <!-- Bottom Information -->
+                    <div class="bottom-section">
+
+                        <div class="info-box">
+                            <span>🌡️</span>
+                            <div>
+                                <small>Feels Like</small>
+                                <h3 class="weatherElement"></h3>
+                            </div>
+                        </div>
+
+                        <div class="info-box">
+                            <span>💧</span>
+                            <div>
+                                <small>Humidity</small>
+                                <h3 id="humidity"></h3>
+                            </div>
+                        </div>
+
+                        <div class="info-box">
+                            <span>💨</span>
+                            <div>
+                                <small>Wind</small>
+                                <h3 id="wind"></h3>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="right">
+                <div class="nav-container">
+                    <!-- todo lists -->
+                    <div id="todo" class="navLinks ">
+                        <video class="hover-video" poster="./assets/images/todo-ico.jpg" muted playsinline loop
+                            onmouseover="this.playbackRate = 2; this.play();" onmouseout="this.pause(); this.load();">
+                            <source src="./assets/vidoes/todo_video1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+
+                    <!-- dally planing -->
+                    <div id="dally_planing" class="navLinks">
+                        <video class="hover-video" poster="./assets/images/dally-planing.jpg" muted playsinline loop
+                            onmouseover="this.playbackRate = 1; this.play();" onmouseout="this.pause(); this.load();">
+                            <source src="./assets/vidoes/dally-planing.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+
+                    <!-- motevations -->
+                    <div id="motivation" class="navLinks">
+                        <video class="hover-video" poster="./assets/images/motivation.jpg" muted playsinline loop
+                            onmouseover="this.playbackRate = 2; this.play();" onmouseout="this.pause(); this.load();">
+                            <source src="./assets/vidoes/motivations_quates.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+
+                    <!-- stopwatch -->
+                    <div id="stopwatch" class="navLinks">
+                        <video class="hover-video" poster="./assets/images/stopwatch.jpg" muted playsinline loop
+                            onmouseover="this.playbackRate = 2; this.play();" onmouseout="this.pause(); this.load();">
+                            <source src="./assets/vidoes/timer.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+
+
+                    <!-- Dally goals -->
+                    <div id="dally_goals" class="navLinks">
+                        <video class="hover-video" poster="./assets/images/dallygoals.jpg" muted playsinline loop
+                            onmouseover="this.playbackRate = 2; this.play();" onmouseout="this.pause(); this.load();">
+                            <source src="./assets/vidoes/dally_goals_settings.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="overlay make_thing_hide">
+            <div class="todo-container tab make_thing_hide">
+                <div class="close_btn"><i class="ri-close-line"></i></div>
+               
+                <div class="todo-header">
+                    <div>
+                        <h1>My Tasks</h1>
+                        <p>Stay organized, get things done.</p>
+                    </div>
+
+                    <span id="no_of_todos" class="task-count">0 Tasks</span>
+                </div>
+
+
+               
+                <form class="todo-form">
+                    <input name="todo" type="text" placeholder="What needs to be done?" />
+
+                    <button type="submit">
+                        + Add Task
+                    </button>
+                </form>
+
+                
+                <div class="todo-filters">
+                    <button id="All" class="filter">All</button>
+                    <button id="active" class="filter">Active</button>
+                    <button id="completed" class="filter">Completed</button>
+                </div>
+
+               
+                <div class="todo-list">
+
+                    
+
+                </div>
+            </div>
+
+            <div class="day-planing tab make_thing_hide">
+                <div class="close_btn"><i class="ri-close-line"></i></div>
+               
+                <div class="planner-header">
+                    <div>
+                        <h1>Daily Planner</h1>
+                        <p>Plan your day, one hour at a time.</p>
+                    </div>
+
+                    <div id="dayPlaningDate" class="date">
+                        
+                    </div>
+                </div>
+
+
+               
+
+                <div class="timeline">
+
+                    <!-- 6 AM -->
+                    <div class="time-slot">
+                        <div class="time">
+                            <span>6:00 AM</span>
+                            <small>7:00 AM</small>
+                        </div>
+
+                        <div class="task">
+                            <input  type="text" placeholder="What do you want to do?" />
+                        </div>
+                    </div>
+
+
+                    <!-- 7 AM -->
+                    <div class="time-slot">
+                        <div class="time">
+                            <span>7:00 AM</span>
+                            <small>8:00 AM</small>
+                        </div>
+
+                        <div class="task">
+                            <input type="text" placeholder="What do you want to do?" />
+                        </div>
+                    </div>
+
+
+                    <!-- 8 AM -->
+                    <div class="time-slot">
+                        <div class="time">
+                            <span>8:00 AM</span>
+                            <small>9:00 AM</small>
+                        </div>
+
+                        <div class="task">
+                            <input type="text" placeholder="What do you want to do?" />
+                        </div>
+                    </div>
+
+
+                    <!-- 9 AM -->
+                    <div class="time-slot">
+                        <div class="time">
+                            <span>9:00 AM</span>
+                            <small>10:00 AM</small>
+                        </div>
+
+                        <div class="task">
+                            <input type="text" placeholder="What do you want to do?" />
+                        </div>
+                    </div>
+
+
+                    <!-- 10 AM -->
+                    <div class="time-slot">
+                        <div class="time">
+                            <span>10:00 AM</span>
+                            <small>11:00 AM</small>
+                        </div>
+
+                        <div class="task">
+                            <input type="text" placeholder="What do you want to do?" />
+                        </div>
+                    </div>
+
+
+                    <!-- 11 AM -->
+                    <div class="time-slot">
+                        <div class="time">
+                            <span>11:00 AM</span>
+                            <small>12:00 PM</small>
+                        </div>
+
+                        <div class="task">
+                            <input type="text" placeholder="What do you want to do?" />
+                        </div>
+                    </div>
+
+
+                    <!-- 12 PM -->
+                    <div class="time-slot">
+                        <div class="time">
+                            <span>12:00 PM</span>
+                            <small>1:00 PM</small>
+                        </div>
+
+                        <div class="task">
+                            <input type="text" placeholder="What do you want to do?" />
+                        </div>
+                    </div>
+
+
+                    <!-- 1 PM -->
+                    <div class="time-slot">
+                        <div class="time">
+                            <span>1:00 PM</span>
+                            <small>2:00 PM</small>
+                        </div>
+
+                        <div class="task">
+                            <input type="text" placeholder="What do you want to do?" />
+                        </div>
+                    </div>
+
+
+                    <!-- 2 PM -->
+                    <div class="time-slot">
+                        <div class="time">
+                            <span>2:00 PM</span>
+                            <small>3:00 PM</small>
+                        </div>
+
+                        <div class="task">
+                            <input type="text" placeholder="What do you want to do?" />
+                        </div>
+                    </div>
+
+
+                    <!-- 3 PM -->
+                    <div class="time-slot">
+                        <div class="time">
+                            <span>3:00 PM</span>
+                            <small>4:00 PM</small>
+                        </div>
+
+                        <div class="task">
+                            <input type="text" placeholder="What do you want to do?" />
+                        </div>
+                    </div>
+
+
+                    <!-- 4 PM -->
+                    <div class="time-slot">
+                        <div class="time">
+                            <span>4:00 PM</span>
+                            <small>5:00 PM</small>
+                        </div>
+
+                        <div class="task">
+                            <input type="text" placeholder="What do you want to do?" />
+                        </div>
+                    </div>
+
+
+                    <!-- 5 PM -->
+                    <div class="time-slot">
+                        <div class="time">
+                            <span>5:00 PM</span>
+                            <small>6:00 PM</small>
+                        </div>
+
+                        <div class="task">
+                            <input type="text" placeholder="What do you want to do?" />
+                        </div>
+                    </div>
+
+
+                    <!-- 6 PM -->
+                    <div class="time-slot">
+                        <div class="time">
+                            <span>6:00 PM</span>
+                            <small>7:00 PM</small>
+                        </div>
+
+                        <div class="task">
+                            <input type="text" placeholder="What do you want to do?" />
+                        </div>
+                    </div>
+
+
+                    <!-- 7 PM -->
+                    <div class="time-slot">
+                        <div class="time">
+                            <span>7:00 PM</span>
+                            <small>8:00 PM</small>
+                        </div>
+
+                        <div class="task">
+                            <input type="text" placeholder="What do you want to do?" />
+                        </div>
+                    </div>
+
+
+                    <!-- 8 PM -->
+                    <div class="time-slot">
+                        <div class="time">
+                            <span>8:00 PM</span>
+                            <small>9:00 PM</small>
+                        </div>
+
+                        <div class="task">
+                            <input type="text" placeholder="What do you want to do?" />
+                        </div>
+                    </div>
+
+
+                    <!-- 9 PM -->
+                    <div class="time-slot">
+                        <div class="time">
+                            <span>9:00 PM</span>
+                            <small>10:00 PM</small>
+                        </div>
+
+                        <div class="task">
+                            <input type="text" placeholder="What do you want to do?" />
+                        </div>
+                    </div>
+
+
+                    <!-- 10 PM -->
+                    <div class="time-slot">
+                        <div class="time">
+                            <span>10:00 PM</span>
+                            <small>11:00 PM</small>
+                        </div>
+
+                        <div class="task">
+                            <input type="text" placeholder="What do you want to do?" />
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="motivational-qutes tab make_thing_hide">
+                <div class="close_btn"><i class="ri-close-line"></i></div>
+                <div class="quote-content">
+                    <span class="quote-icon">“</span>
+
+                    <p id="quote">
+                        
+                    </p>
+
+                    <span class="quote-author" id="author"></span>
+                </div>
+
+                <button class="next-quote" onclick="getQuote()">
+                    Next Quote
+                    <span>→</span>
+                </button>
+
+            </div>
+
+            <div class="stopwatch tab make_thing_hide ">
+                <div class="close_btn"><i class="ri-close-line"></i></div>
+
+                <div class="stopwatch-content">
+
+                    <h2>Work Session</h2>
+
+                    <div class="stopwatch-display">
+                        00:00:00
+                    </div>
+
+                    <div class="stopwatch-buttons">
+
+                        <button class="start-btn">
+                            Start
+                        </button>
+
+                        <button class="pause-btn">
+                            Pause
+                        </button>
+
+                        <button class="reset-btn">
+                            Reset
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="dally-goals tab make_thing_hide">
+                <div class="close_btn"><i class="ri-close-line"></i></div>
+
+               
+                <div class="goals-header">
+                    <div>
+                        <h2>Daily Goals</h2>
+                        <p>Set your goals and make today productive.</p>
+                    </div>
+
+                    <span id="dallyGoalCount" class="goal-count"></span>
+                </div>
+
+
+                
+                <form class="goal-form">
+
+                    <input id="goalTitle" name="gtitle" type="text" placeholder="Enter your goal..." />
+
+                    <textarea id="goalsDescription" name="gdesc" placeholder="Write a short description about your goal..." rows="3"></textarea>
+
+                    <button id="addGoal" type="submit">
+                        + Add Goal
+                    </button>
+
+                </form>
+
+
+                
+                <div class="goals-list">
+
+                   
+                </div>
+
+            </div>
+
+
+        </div>
+    </main>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
